@@ -1,0 +1,88 @@
+.form-full
+{
+    width: 100%; 
+    float: left;
+}
+.main-lable
+{
+width: 100%;
+margin-bottom: 5%;
+}
+
+.form-one-third-col
+{
+    width: 32%;
+    float: left;
+}
+.form-hal-col-width-right
+{
+margin-right: 2% ;
+}
+
+.form-input:focus{
+	outline: none !important;
+}
+.form-input::-webkit-input-placeholder {
+    text-align: left !important;
+}
+input{
+    outline: none;
+}
+
+.form-btn-half-col
+{
+    width: 50%;
+}
+
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+}
+/*Map section*/
+/*the container must be positioned relative:*/
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+/* message line */
+.error{
+    outline: 2px solid red !important;
+    outline-style: auto !important;
+    padding: 1em !important;
+}    
+.mail-lable
+{
+    font-size:0.9rem;
+}
+#mailCheckbox
+{
+width: 1.15em !important;
+height: 1.15em !important;
+}

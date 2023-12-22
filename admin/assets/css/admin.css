@@ -1,0 +1,57 @@
+.form-input{
+    width: 30%;
+    padding: 4px 8px 4px 8px !important;
+}
+.form-lable
+{
+  width: 100%;
+  float: left;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.button
+{
+margin-top: 1% !important;
+}
+
+
+/*
+ @ User Guide Section
+*/
+.user_guide {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.user_guide p {
+  font-size: 14px;
+}
+
+/* style customization tab style */
+.style-color{
+  width: 20%;
+  padding: 4px 8px 4px 8px !important;
+}
+.style-font-size{
+  width: 20%;
+}
+.style-margin
+{
+    width: 3.5em !important;
+}
+.section-menu
+{
+    margin: 0.2em !important;
+    font-size: 1.2em !important;
+    text-decoration: underline !important;
+    color: #2271b1 !important;
+}
+.nav-sections
+{
+  padding-top: 1em !important;
+}
