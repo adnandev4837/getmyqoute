@@ -137,7 +137,7 @@ div#error-alert {
     <lable class="form-lable"><?php if(!empty(get_option( 'gmq_fare_label' ))){ echo get_option( 'gmq_fare_label' );}else {echo 'Total Fare : ';} ?>  <input id="totalFare" type="text" placeholder="Amount" name="totalFare" class="qouteAmount" required ></lable>
 </div>
 </div>
-   </div>
+ 
 
 </body>
 <?php
@@ -173,7 +173,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['qouteMailSubmit'])) {
         $mail= wp_mail( $to, $subject, $body, $headers );
     ?>
       <script>
-    $(document).ready(function() {
+    jQuery(document).ready(function($) {
           if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
     }

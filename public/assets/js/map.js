@@ -28,7 +28,7 @@ function autocompleteInputBox(inp) {
         a.setAttribute("class", "autocomplete-items");
         this.parentNode.appendChild(a);
         // suggestion list MapBox api called with callback
-        autocompleteSuggestionMapBoxAPI($('#'+localStorage.getItem("inputType")).val(), function (results) {
+        autocompleteSuggestionMapBoxAPI(jQuery('#'+localStorage.getItem("inputType")).val(), function (results) {
             results.features.forEach(function (key) {
                 b = document.createElement("DIV");
                 b.innerHTML = "<strong>" + key.place_name.substr(0, val.length) + "</strong>";
@@ -36,11 +36,11 @@ function autocompleteInputBox(inp) {
                 b.innerHTML += "<input type='hidden' data-lat='" + key.geometry.coordinates[1] + "' data-lng='" + key.geometry.coordinates[0] + "'  value='" + key.place_name + "'>";
                 b.addEventListener("click", function (e) {
           
-                    let  lat = $(this).find('input').attr('data-lat');
-                    let  long = $(this).find('input').attr('data-lng');
-                    inp.value = $(this).find('input').val();
-                    $(inp).attr('data-lat', lat);
-                    $(inp).attr('data-lng', long);
+                    let  lat = jQuery(this).find('input').attr('data-lat');
+                    let  long = jQuery(this).find('input').attr('data-lng');
+                    inp.value = jQuery(this).find('input').val();
+                    jQuery(inp).attr('data-lat', lat);
+                    jQuery(inp).attr('data-lng', long);
                     if ((lat != "" && lat != null)&& (long != "" && long != null)) {
                        // console.log(lat);
                       //console.log(long);
@@ -125,7 +125,7 @@ function autocompleteInputBox(inp) {
 }
 
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function ($) {
 	$("#userDistance,#noOfItems").on("change", function(){   
     if ($(this).val() === "0" || $(this).val() === "00" || $(this).val() === "000" || $(this).val() === "0000" || $(this).val() === "00000" || $(this).val() === "000000" || $(this).val() === "0000000" || $(this).val() === "00000000"|| $(this).val() === "000000000" || $(this).val() === "0000000000"|| $(this).val() === "00000000000") {
       $(this).val("1");
@@ -195,8 +195,8 @@ jQuery(document).ready(function () {
 });
 function getTypeQoutation() {
 var rate=0;
-var noOfItems= $("#noOfItems").val();
-var type= $('#type').find(":selected").val();
+var noOfItems= jQuery("#noOfItems").val();
+var type= jQuery('#type').find(":selected").val();
      var dropdownOptions=en_public_data.dropdownOptions;
      for (let val = 0; val < dropdownOptions.optionName.length; val++) {
         if(type==dropdownOptions.optionValue[val]) 
@@ -210,8 +210,8 @@ function quotation(distance) {
   var typeRate=getTypeQoutation();
   var distanceRate=en_public_data.distanceRate;
   var totalRate=parseFloat(typeRate)+(parseFloat(distance)*parseFloat(distanceRate));
-  var totalFare= $("#totalFare").val(totalRate);
-  var totalMailFare= $("#mailFare").val(totalRate);
+  var totalFare= jQuery("#totalFare").val(totalRate);
+  var totalMailFare= jQuery("#mailFare").val(totalRate);
 }
 
 

@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function ($) {
 
     $('#mailField').hide();
     $('#qoute-mail').hide();
